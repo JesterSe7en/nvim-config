@@ -11,7 +11,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require('mason-lspconfig').setup({
-        ensure_installed = { 'lua_ls', 'rust_analyzer', 'tsserver' },
+        ensure_installed = { 'lua_ls', 'rust_analyzer', 'tsserver', 'marksman' },
       })
     end
   },
@@ -22,6 +22,7 @@ return {
       lspconfig.lua_ls.setup({})
       lspconfig.tsserver.setup({})
       lspconfig.rust_analyzer.setup({})
+      lspconfig.marksman.setup({})
 
       -- functionality such as vim.lsp.buf.hover can be found in the help documentation
       -- :h vim.lsp.buf
