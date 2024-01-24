@@ -1,14 +1,14 @@
 return {
-  'catppuccin/nvim',
-  lazy = false,
-  name = "catppuccin",
-  priority = 1000,
-  integrations = {
-    lualine = true,
-  },
-  config = function()
-    vim.cmd.colorscheme "catppuccin"
-  end
+	"catppuccin/nvim",
+	lazy = false,
+	name = "catppuccin",
+	priority = 1000,
+	integrations = {
+		lualine = true,
+	},
+	config = function()
+		vim.cmd.colorscheme("catppuccin")
+	end,
 }
 
 -- We can omit the setup() call by utilizing the config parameter in our lua table
