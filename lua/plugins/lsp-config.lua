@@ -18,11 +18,14 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			-- this is for the completion engine
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.tsserver.setup({})
-			lspconfig.rust_analyzer.setup({})
-			lspconfig.marksman.setup({})
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.tsserver.setup({ capabilities = capabilities })
+			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+			lspconfig.marksman.setup({ capabilities = capabilities })
 
 			-- functionality such as vim.lsp.buf.hover can be found in the help documentation
 			-- :h vim.lsp.buf
